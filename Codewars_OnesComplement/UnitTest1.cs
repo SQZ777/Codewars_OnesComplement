@@ -49,14 +49,18 @@ namespace Codewars_OnesComplement
             var nArray = n.ToCharArray();
             for (var i = 0; i < nArray.Length; i++)
             {
-                if (nArray[i].Equals('0'))
-                {
-                    nArray[i] = '1';
-                    continue;
-                }
-                nArray[i] = '0';
+                nArray[i] = NotItNumber(nArray[i]);
             }
             return new string(nArray);
+        }
+
+        private static char NotItNumber(char nArray)
+        {
+            if (nArray.Equals('0'))
+            {
+                return '1';
+            }
+            return '0';
         }
     }
 }
