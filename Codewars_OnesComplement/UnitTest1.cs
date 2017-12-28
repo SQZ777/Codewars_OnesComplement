@@ -22,7 +22,7 @@ namespace Codewars_OnesComplement
         }
 
         [TestMethod]
-        public void Input_11_Should_Be_11()
+        public void Input_11_Should_Be_00()
         {
             Assert.AreEqual("00", Kata.OnesComplement("11"));
         }
@@ -31,6 +31,12 @@ namespace Codewars_OnesComplement
         public void Input_0_Should_Be_1()
         {
             Assert.AreEqual("1", Kata.OnesComplement("0"));
+        }
+
+        [TestMethod]
+        public void Input_00_Should_Be_11()
+        {
+            Assert.AreEqual("11", Kata.OnesComplement("00"));
         }
     }
 
