@@ -7,8 +7,17 @@ namespace Codewars_OnesComplement
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void Input_StringEmpty_Should_Be_StringEmpty()
         {
+           Assert.AreEqual(string.Empty,Kata.OnesComplement(string.Empty));
+        }
+    }
+
+    public class Kata
+    {
+        public static string OnesComplement(string empty)
+        {
+            throw new NotImplementedException();
         }
     }
 }
