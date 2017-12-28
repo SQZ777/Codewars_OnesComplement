@@ -26,6 +26,12 @@ namespace Codewars_OnesComplement
         {
             Assert.AreEqual("00", Kata.OnesComplement("11"));
         }
+
+        [TestMethod]
+        public void Input_0_Should_Be_1()
+        {
+            Assert.AreEqual("1", Kata.OnesComplement("0"));
+        }
     }
 
     public class Kata
@@ -34,11 +40,12 @@ namespace Codewars_OnesComplement
         {
             if (string.IsNullOrEmpty(n))
                 return string.Empty;
-            for (var i = 0; i < n.ToCharArray().Length; i++)
+            var nArray = n.ToCharArray();
+            for (var i = 0; i < nArray.Length; i++)
             {
-                n.ToCharArray()[i] = '0';
+                nArray[i] = '0';
             }
-            return new string(n.ToCharArray());
+            return new string(nArray);
         }
     }
 }
